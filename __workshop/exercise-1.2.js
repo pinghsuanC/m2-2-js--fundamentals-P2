@@ -10,7 +10,8 @@
 // Edit only the code between the lines (below)
 // -----------------------------------------------------------------
 function arrOFNames(string) {
-  // complete the function
+  // complete the function, assume the inputs are valid strings with right format.
+  return string.split(", ");
 }
 // -----------------------------------------------------------------
 // Edit only the code between the lines (above)
@@ -24,7 +25,24 @@ console.log(
     "Simple Rick, Slow Rick, Tall Rick, Cop Rick, Doofus Rick, Past Rick, Replacement Rick, Rick C-137"
   )
 );
-// Create more test examples.
+// special case: Empty string
+console.log(
+  arrOFNames(
+    ""
+  )
+);
+//special case: one name
+console.log(
+  arrOFNames(
+    "Katie Ring"
+  )
+);
+// 3 names
+console.log(
+  arrOFNames(
+    "Loren Ipsum, Bacon Kill, Katch Up"
+  )
+);
 
 // This is needed for automated testing (more on that later)
 module.exports = arrOFNames;

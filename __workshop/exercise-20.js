@@ -17,6 +17,12 @@
 function every(arr, func) {
   // arr is an array and f is a function
   // func takes 1 argument and returns a boolean
+  for(let n=0; n<arr.length; n++){
+    if(!(true && func(arr[n]))){
+      return false;
+    }
+  }
+  return true;
 }
 // -----------------------------------------------------------------
 // Edit only the code between the lines (above)

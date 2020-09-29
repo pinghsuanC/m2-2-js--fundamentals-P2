@@ -9,6 +9,7 @@
 // -----------------------------------------------------------------
 function removeEvens(list) {
   // list is an array of numbers
+  return list.filter((value, index, array) => value%2!==0);   //didn't specify whether duplicates are kept or not so kept.
 }
 // -----------------------------------------------------------------
 // Edit only the code between the lines (above)
@@ -17,6 +18,9 @@ function removeEvens(list) {
 console.log(removeEvens([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
 
 // Create more test examples.
+console.log(removeEvens([4,4,4]));
+console.log(removeEvens([]));
+console.log(removeEvens([1,1,3,4,5]));
 
 // This is needed for automated testing (more on that later)
 module.exports = removeEvens;

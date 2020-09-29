@@ -13,7 +13,12 @@
 // Edit only the code between the lines (below)
 // -----------------------------------------------------------------
 function decodeMessage(string, notCode) {
+  let r = string;
   // complete the function
+  for(let n=0; n<notCode.length; n++){
+    r = r.replace(notCode[n], ""); // remote the token by replace
+  }
+  return r;
 }
 // -----------------------------------------------------------------
 // Edit only the code between the lines (above)
@@ -39,6 +44,32 @@ console.log(
   )
 );
 // Create more test examples.
+console.log(
+  decodeMessage(
+    "",
+    ["summer",
+    "bacon",
+    "scary",
+    "intergalactic",
+    "jerry",
+    "morty",
+    "beth",
+    "family",]
+  )
+);
 
+console.log(
+  decodeMessage(
+    "summerlobaconokfamily ascaryt mintergalactice, I'jerrym Pimortybethckle Rick!",
+    []
+  )
+);
+
+console.log(
+  decodeMessage(
+    "summerlobaconokfamily ascaryt mintergalactice,  I'jerrym Pimortybethckle Rick!",
+    [" "]
+  )
+);
 // This is needed for automated testing (more on that later)
 module.exports = decodeMessage;

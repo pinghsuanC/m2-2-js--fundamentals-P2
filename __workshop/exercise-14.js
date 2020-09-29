@@ -9,6 +9,13 @@
 // -----------------------------------------------------------------
 function countChar(str, char) {
   // str and char are both strings
+  let c = 0;
+  for(let n = 0; n<str.length; n++){
+    if(str[n]===char){
+      c++;
+    }
+  }
+  return c;
 }
 // -----------------------------------------------------------------
 // Edit only the code between the lines (above)
@@ -16,6 +23,11 @@ function countChar(str, char) {
 console.log(countChar("BananaBabyBubbles", "a"));
 
 // Create more test cases.
+console.log(countChar("the amazing spiderman", 'a'));
+console.log(countChar("the amazing spiderman", "A"));
+console.log(countChar("the amazing spiderman", " "));
+console.log(countChar("the amazing spiderman", ""));
+console.log(countChar("", ""));
 
 // This is needed for automated testing (more on that later)
 module.exports = countChar;

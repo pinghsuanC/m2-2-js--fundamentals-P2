@@ -17,6 +17,13 @@
 function filter(arr, func) {
   // arr is an array and f is a function
   // func takes one argument and returns a boolean (true or false)
+  let newL = [];
+  for(let n = 0; n<arr.length; n++){
+    if(func(arr[n])){
+      newL.push(arr[n]);
+    }
+  }
+  return newL;
 }
 // -----------------------------------------------------------------
 // Edit only the code between the lines (above)

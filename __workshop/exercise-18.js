@@ -21,6 +21,10 @@
 // -----------------------------------------------------------------
 function map(arr, func) {
   // arr is an array and func is a function
+  for(let n = 0; n<arr.length; n++){
+    arr[n] = func(arr[n]);
+  }
+  return arr;
 }
 // -----------------------------------------------------------------
 // Edit only the code between the lines (above)
